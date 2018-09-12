@@ -1,0 +1,19 @@
+<!--pages/index/index.wxml-->
+<navigator url="/pages/admin/admin" class='ding'>发布</navigator>
+<view class='contain'>
+  <view class='top'></view><!--红色-->
+  <view class='Head'></view>
+  <view class='word'>我是微信用户</view>
+  <view class='last' wx:for="{{speed}}">
+  <view class='user_avator' style="background-image:url({{item.user_avator}})"></view>
+  <view class='name'>
+      <view class='user_name'>{{item.users_name}}</view>
+      <view class='content'>{{item.content}}</view>
+      <view class='images'>
+        <view class='image' wx:for="{{item.url}}" style='background-image:url({{item}})'></view>
+      </view>
+      <view class='publish_adresss'>{{item.publish_adresss}}</view>
+      <view class='publish_time'>{{item.publish_time}}</view>
+  </view>
+  </view>
+</view>
